@@ -1,6 +1,6 @@
 # React and Johnny-Five ServoMotor
 
-based on (https://raw.githubusercontent.com/IainIsCreative/react-johnny-five-traffic-lights/develop/assets/traffic-lights-diagram.jpg)
+based on (https://github.com/IainIsCreative/react-johnny-five-traffic-lights)
 thx to the author
 
 A simple project involving the use of Johnny-Five and React to control a set of servoMotor
