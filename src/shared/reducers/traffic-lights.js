@@ -3,13 +3,15 @@
 import * as Immutable from 'immutable';
 
 import {
-  LIGHTS_ON,
-  LIGHTS_OFF,
-  PULSE_LIGHT,
-  GO_LIGHT,
-  STOP_LIGHT,
-  LIGHTS_LOOP,
-  STOP_LOOP,
+  //LIGHTS_ON,
+  //LIGHTS_OFF,
+  //PULSE_LIGHT,
+  //GO_LIGHT,
+  //STOP_LIGHT,
+  //LIGHTS_LOOP,
+  //STOP_LOOP,
+  SERVO_MIN,
+  SERVO_MAX,
 } from '../actions/traffic-lights';
 
 /**
@@ -35,19 +37,23 @@ const trafficLightReducer = (state: Object = initialState, action: {
   type: String, payload: any
 }) => {
   switch (action.type) {
-    case LIGHTS_ON:
+    //case LIGHTS_ON:
+      //return state.set('trafficLights', action.payload);
+    //case LIGHTS_OFF:
+      //return state.set('trafficLights', action.payload);
+    //case PULSE_LIGHT:
+      //return state.set('trafficLights', action.payload);
+    //case GO_LIGHT:
+      //return state.set('trafficLights', action.payload);
+    //case STOP_LIGHT:
+      //return state.set('trafficLights', action.payload);
+    //case LIGHTS_LOOP:
+      //return state.set('trafficLights', action.payload);
+    //case STOP_LOOP:
+      //return state.set('trafficLights', action.payload);
+    case SERVO_MIN:
       return state.set('trafficLights', action.payload);
-    case LIGHTS_OFF:
-      return state.set('trafficLights', action.payload);
-    case PULSE_LIGHT:
-      return state.set('trafficLights', action.payload);
-    case GO_LIGHT:
-      return state.set('trafficLights', action.payload);
-    case STOP_LIGHT:
-      return state.set('trafficLights', action.payload);
-    case LIGHTS_LOOP:
-      return state.set('trafficLights', action.payload);
-    case STOP_LOOP:
+    case SERVO_MAX:
       return state.set('trafficLights', action.payload);
     default:
       return state;

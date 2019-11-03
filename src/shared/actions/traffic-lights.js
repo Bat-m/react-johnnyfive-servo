@@ -1,16 +1,15 @@
 // @flow
 
-export const LIGHTS_ON = 'LIGHTS_ON';
-export const LIGHTS_OFF = 'LIGHTS_OFF';
-export const GO_LIGHT = 'GO_LIGHT';
-export const STOP_LIGHT = 'STOP_LIGHT';
-export const PULSE_LIGHT = 'PULSE_LIGHT';
-export const LIGHTS_LOOP = 'LIGHTS_LOOP';
-export const STOP_LOOP = 'STOP_LOOP';
+//export const LIGHTS_ON = 'LIGHTS_ON';
+//export const LIGHTS_OFF = 'LIGHTS_OFF';
+
+export const SERVO_MIN = 'SERVO_MIN';
+export const SERVO_MAX = 'SERVO_MAX';
 
 let lightsOn = false;
 let pulse = false;
 let loop = false;
+
 
 /**
  *
@@ -22,56 +21,28 @@ let loop = false;
  *
  */
 
-export const lightsToggle = () => {
-  if (lightsOn) {
-    lightsOn = false;
-  } else {
-    lightsOn = true;
-  }
+//export const lightsToggle = () => {
+  //if (lightsOn) {
+    //lightsOn = false;
+  //} else {
+    //lightsOn = true;
+  //}
 
-  return {
-    type: lightsOn ? LIGHTS_ON : LIGHTS_OFF,
-    meta: { remote: true },
-    payload: lightsOn ? 'Lights are on.' : 'Lights are off.',
-  };
-};
+  //return {
+    //type: lightsOn ? LIGHTS_ON : LIGHTS_OFF,
+    //meta: { remote: true },
+    //payload: lightsOn ? 'Lights are on.' : 'Lights are off.',
+  //};
+//};
 
-export const goLight = () => ({
-  type: GO_LIGHT,
+export const servoMin = () => ({
+  type: SERVO_MIN,
   meta: { remote: true },
-  payload: 'Initiating Go sequence.',
+  payload: 'Servo en position Min',
 });
 
-export const stopLight = () => ({
-  type: STOP_LIGHT,
+export const servoMax = () => ({
+  type: SERVO_MAX,
   meta: { remote: true },
-  payload: 'Initiating Stop sequence.',
+  payload: 'Servo en position Max',
 });
-
-export const pulseLight = () => {
-  if (pulse) {
-    pulse = false;
-  } else {
-    pulse = true;
-  }
-
-  return {
-    type: pulse ? PULSE_LIGHT : LIGHTS_OFF,
-    meta: { remote: true },
-    payload: pulse ? 'Lights are pulsing.' : 'Lights are off.',
-  };
-};
-
-export const lightsLoop = () => {
-  if (loop) {
-    loop = false;
-  } else {
-    loop = true;
-  }
-
-  return {
-    type: loop ? LIGHTS_LOOP : STOP_LOOP,
-    meta: { remote: true },
-    payload: loop ? 'Lights Loop initiated.' : 'Lights Loop stopped.',
-  };
-};

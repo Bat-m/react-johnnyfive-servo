@@ -46,7 +46,7 @@ const AppWrapper = (AppComponent, ReduxStore) => (
 
 // Let the browser console know that it's connected
 io.on('connect', () => {
-  console.log('[socket.io] A client connected');
+  console.log('[socket.io] A client connected !');
 });
 
 // Get React to render our app
