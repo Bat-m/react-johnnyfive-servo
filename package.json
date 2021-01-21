@@ -30,7 +30,7 @@
     "redux-actions": "^2.0.1",
     "redux-socket.io-middleware": "^1.0.4",
     "serialport": "^8.0.5",
-    "socket.io": "^1.7.3",
+    "socket.io": "^2.4.0",
     "socket.io-client": "^1.7.3"
   },
   "devDependencies": {
