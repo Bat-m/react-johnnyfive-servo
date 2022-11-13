@@ -38,7 +38,7 @@
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^19.0.0",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^9.1.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
@@ -55,7 +55,7 @@
     "postcss-load-config": "^1.2.0",
     "redux-mock-store": "^1.2.2",
     "rimraf": "^2.6.1",
-    "webpack": "^2.2.1",
+    "webpack": "^5.75.0",
     "webpack-dev-server": ">=3.1.11"
   }
 }
